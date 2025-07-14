@@ -69,7 +69,7 @@ export const siteConfig = {
         siteName: 'Star Garages',
         images: [
             {
-                url: '/og-image.png',
+                url: '/og-image.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'Star Garages - Premium Garage Builders Edmonton & Calgary',
@@ -80,7 +80,7 @@ export const siteConfig = {
         card: 'summary_large_image',
         title: 'Star Garages | Premium Garage Builders Edmonton & Calgary',
         description: defaultDescription,
-        images: ['/og-image.png'],
+        images: ['/og-image.jpg'],
     },
     alternates: {
         canonical: 'https://stargarages.ca',

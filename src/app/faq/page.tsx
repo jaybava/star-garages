@@ -1,25 +1,23 @@
-import { getMetadata } from '@/lib/metadata'
-import type { Metadata } from 'next'
-import { FaqContent } from '@/components/FaqContent'
+import { FaqContent } from "@/components/FaqContent";
+import { getMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = getMetadata(
-    'Frequently Asked Questions - Garage Building Guide',
-    'Get answers to common questions about garage building in Edmonton & Calgary. Learn about permits, costs, timelines, and construction process from Star Garages.',
-    [
-        'garage building faq edmonton',
-        'garage building faq calgary',
-        'garage construction questions',
-        'garage permits edmonton',
-        'garage permits calgary',
-        'garage building cost',
-        'garage construction timeline',
-        'garage building process',
-        'garage development permit',
-        'garage building regulations'
-    ],
-    '/faq'
-)
+  "Frequently Asked Questions",
+  "Find answers to common questions about garage construction, timelines, permits, and more. Expert garage builders in Edmonton & Calgary.",
+  [
+    'garage construction faq',
+    'garage building questions',
+    'garage permit information',
+    'garage construction timeline',
+    'garage building cost edmonton',
+    'garage building cost calgary',
+    'garage renovation questions',
+    'garage suite faq alberta'
+  ],
+  '/faq'
+);
 
-export default function FaqPage() {
-    return <FaqContent />;
+export default function FAQ() {
+  return <FaqContent />;
 }
