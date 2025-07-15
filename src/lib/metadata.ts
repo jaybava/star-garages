@@ -3,11 +3,8 @@ import { Metadata } from 'next'
 const defaultKeywords = [
     // Primary City Keywords
     'garage builders edmonton',
-    'garage builders calgary',
     'detached garage edmonton',
-    'detached garage calgary',
     'garage construction edmonton',
-    'garage construction calgary',
     
     // Service Area Keywords
     'garage builders fort saskatchewan',
@@ -47,7 +44,7 @@ const defaultKeywords = [
     'garage contractor'
 ]
 
-const defaultDescription = 'Alberta\'s premier garage builders with over 10 years of experience. Serving Edmonton, Fort Saskatchewan, Sherwood Park, Beaumont, Leduc, Spruce Grove, St. Albert and surrounding areas. Specializing in custom detached garages, garage suites, and laneway homes. Professional construction, competitive pricing, and all permits included. Get a free estimate today!'
+const defaultDescription = 'Alberta\'s premier garage builders with over 5 years of experience. Serving Edmonton, Fort Saskatchewan, Sherwood Park, Beaumont, Leduc, Spruce Grove, St. Albert and surrounding areas. Specializing in custom detached garages, garage suites, and laneway homes. Professional construction, competitive pricing, and all permits included. Get a free estimate today!'
 
 export const siteConfig = {
     metadataBase: new URL('https://stargarages.ca'),

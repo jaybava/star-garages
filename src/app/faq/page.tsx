@@ -11,7 +11,6 @@ export const metadata: Metadata = getMetadata(
     'garage permit information',
     'garage construction timeline',
     'garage building cost edmonton',
-    'garage building cost calgary',
     'garage renovation questions',
     'garage suite faq alberta'
   ],

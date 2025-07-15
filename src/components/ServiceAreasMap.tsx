@@ -99,7 +99,7 @@ const ServiceAreasMap: React.FC = () => {
           <h2 id="service-areas-title" className="text-2xl font-bold text-gradient">Our Service Areas in Alberta</h2>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {serviceAreas.map((area, index) => (
             <div 
               key={index} 

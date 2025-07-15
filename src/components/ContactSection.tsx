@@ -2,58 +2,9 @@
 
 import { ArrowRight, Phone, Mail, MapPin, Clock, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
 import ServiceAreasMap from "./ServiceAreasMap";
 
 export function ContactSection() {
-    const { toast } = useToast();
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        phone: '',
-        address: '',
-        concretePad: '',
-        garageSize: '',
-        houseSiding: '',
-        electricalOutlet: '',
-        hearAboutUs: '',
-        timeframe: '',
-        message: '',
-        contactPreference: ''
-    });
-
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        toast({
-            title: "Quote Request Submitted!",
-            description: "We'll contact you within 24 hours to schedule your free consultation.",
-        });
-        setFormData({
-            name: '',
-            email: '',
-            phone: '',
-            address: '',
-            concretePad: '',
-            garageSize: '',
-            houseSiding: '',
-            electricalOutlet: '',
-            hearAboutUs: '',
-            timeframe: '',
-            message: '',
-            contactPreference: ''
-        });
-    };
-
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value
-        });
-    };
-
     return (
         <section
             id="contact"
@@ -87,208 +38,30 @@ export function ContactSection() {
                             </p>
                         </div>
 
-                        <form onSubmit={handleSubmit} className="space-y-6">
-                            {/* Full Name and Phone */}
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div>
-                                    <Input
-                                        type="text"
-                                        name="name"
-                                        placeholder="Full Name"
-                                        value={formData.name}
-                                        onChange={handleInputChange}
-                                        required
-                                        className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-star-gold"
-                                    />
-                                </div>
-                                <div>
-                                    <Input
-                                        type="tel"
-                                        name="phone"
-                                        placeholder="Phone"
-                                        value={formData.phone}
-                                        onChange={handleInputChange}
-                                        required
-                                        className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-star-gold"
-                                    />
-                                </div>
-                            </div>
+                        <div style={{ height: '1500px' }}>
+                            <iframe
+                                src="https://link.leadxpert.io/widget/form/vgReTHxGtlPi2jGRnwVG"
+                                style={{ width: '100%', height: '100%', border: 'none', borderRadius: '3px' }}
+                                id="inline-vgReTHxGtlPi2jGRnwVG"
+                                data-layout={`{"id":"INLINE"}`}
+                                data-trigger-type="alwaysShow"
+                                data-trigger-value=""
+                                data-activation-type="alwaysActivated"
+                                data-activation-value=""
+                                data-deactivation-type="neverDeactivate"
+                                data-deactivation-value=""
+                                data-form-name="Form 8"
+                                data-height="undefined"
+                                data-layout-iframe-id="inline-vgReTHxGtlPi2jGRnwVG"
+                                data-form-id="vgReTHxGtlPi2jGRnwVG"
+                                title="Form 8"
+                            />
+                        </div>
 
-                            {/* Email and Address */}
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div>
-                                    <Input
-                                        type="email"
-                                        name="email"
-                                        placeholder="Email"
-                                        value={formData.email}
-                                        onChange={handleInputChange}
-                                        required
-                                        className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-star-gold"
-                                    />
-                                </div>
-                                <div>
-                                    <Input
-                                        type="text"
-                                        name="address"
-                                        placeholder="Address"
-                                        value={formData.address}
-                                        onChange={handleInputChange}
-                                        required
-                                        className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-star-gold"
-                                    />
-                                </div>
-                            </div>
-
-                            {/* Concrete Pad */}
-                            <div>
-                                <select
-                                    name="concretePad"
-                                    value={formData.concretePad}
-                                    onChange={handleInputChange}
-                                    required
-                                    className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-md text-white focus:border-star-gold focus:outline-none"
-                                >
-                                    <option value="" className="text-gray-900">Do you have a concrete pad in place?</option>
-                                    <option value="yes" className="text-gray-900">Yes</option>
-                                    <option value="no" className="text-gray-900">No</option>
-                                    <option value="not-sure" className="text-gray-900">Not sure</option>
-                                </select>
-                            </div>
-
-                            {/* Garage Size */}
-                            <div>
-                                <Input
-                                    type="text"
-                                    name="garageSize"
-                                    placeholder="Size of the garage? (eg. 20x20)"
-                                    value={formData.garageSize}
-                                    onChange={handleInputChange}
-                                    required
-                                    className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-star-gold"
-                                />
-                            </div>
-
-                            {/* House Siding Color */}
-                            <div>
-                                <select
-                                    name="houseSiding"
-                                    value={formData.houseSiding}
-                                    onChange={handleInputChange}
-                                    required
-                                    className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-md text-white focus:border-star-gold focus:outline-none"
-                                >
-                                    <option value="" className="text-gray-900">What color is your house vinyl siding?</option>
-                                    <option value="light" className="text-gray-900">Light Colour Vinyl Siding</option>
-                                    <option value="dark" className="text-gray-900">Dark Colour Vinyl Siding</option>
-                                    <option value="not-sure" className="text-gray-900">Not Sure</option>
-                                    <option value="no-siding" className="text-gray-900">No Siding</option>
-                                </select>
-                            </div>
-
-                            {/* Electrical Outlet */}
-                            <div>
-                                <select
-                                    name="electricalOutlet"
-                                    value={formData.electricalOutlet}
-                                    onChange={handleInputChange}
-                                    required
-                                    className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-md text-white focus:border-star-gold focus:outline-none"
-                                >
-                                    <option value="" className="text-gray-900">Do you have an electrical power outlet around the pad?</option>
-                                    <option value="yes" className="text-gray-900">Yes</option>
-                                    <option value="no" className="text-gray-900">No</option>
-                                    <option value="not-sure" className="text-gray-900">Not sure</option>
-                                </select>
-                            </div>
-
-                            {/* How did you hear about us */}
-                            <div>
-                                <select
-                                    name="hearAboutUs"
-                                    value={formData.hearAboutUs}
-                                    onChange={handleInputChange}
-                                    required
-                                    className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-md text-white focus:border-star-gold focus:outline-none"
-                                >
-                                    <option value="" className="text-gray-900">How did you hear about us?</option>
-                                    <option value="google" className="text-gray-900">Google</option>
-                                    <option value="facebook" className="text-gray-900">Facebook</option>
-                                    <option value="referral" className="text-gray-900">Referral</option>
-                                    <option value="instagram" className="text-gray-900">Instagram</option>
-                                    <option value="flyer" className="text-gray-900">Flyer/Sign</option>
-                                </select>
-                            </div>
-
-                            {/* When do you need your garage built */}
-                            <div>
-                                <select
-                                    name="timeframe"
-                                    value={formData.timeframe}
-                                    onChange={handleInputChange}
-                                    required
-                                    className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-md text-white focus:border-star-gold focus:outline-none"
-                                >
-                                    <option value="" className="text-gray-900">When do you need your garage built?
-                                    </option>
-                                    <option value="asap" className="text-gray-900">ASAP</option>
-                                    <option value="january" className="text-gray-900">January</option>
-                                    <option value="february" className="text-gray-900">February</option>
-                                    <option value="march" className="text-gray-900">March</option>
-                                    <option value="april" className="text-gray-900">April</option>
-                                    <option value="may" className="text-gray-900">May</option>
-                                    <option value="june" className="text-gray-900">June</option>
-                                    <option value="july" className="text-gray-900">July</option>
-                                    <option value="august" className="text-gray-900">August</option>
-                                    <option value="september" className="text-gray-900">September</option>
-                                    <option value="october" className="text-gray-900">October</option>
-                                    <option value="november" className="text-gray-900">November</option>
-                                    <option value="december" className="text-gray-900">December</option>
-                                    <option value="next-year" className="text-gray-900">Next year</option>
-                                </select>
-                            </div>
-
-                            {/* Comments */}
-                            <div>
-                                <Textarea
-                                    name="message"
-                                    placeholder="Please leave a comment if you'd like to add something?"
-                                    value={formData.message}
-                                    onChange={handleInputChange}
-                                    rows={4}
-                                    className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-star-gold"
-                                />
-                            </div>
-
-                            {/* Contact Preference */}
-                            <div>
-                                <select
-                                    name="contactPreference"
-                                    value={formData.contactPreference}
-                                    onChange={handleInputChange}
-                                    required
-                                    className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-md text-white focus:border-star-gold focus:outline-none"
-                                >
-                                    <option value="" className="text-gray-900">Would you prefer to receive the quote by email or text message?</option>
-                                    <option value="email" className="text-gray-900">Email</option>
-                                    <option value="text" className="text-gray-900">Text Message</option>
-                                </select>
-                            </div>
-
-                            <Button
-                                type="submit"
-                                size="lg"
-                                className="w-full btn-hero text-lg"
-                            >
-                                Submit
-                                <ArrowRight className="ml-2 h-5 w-5" />
-                            </Button>
-
-                            <p className="text-white/60 text-sm text-center">
-                                By submitting this form, you agree to receive communications from Star Garages.
-                                We respect your privacy and will never share your information.
-                            </p>
-                        </form>
+                        <p className="text-white/60 text-sm text-center mt-6">
+                            By submitting this form, you agree to receive communications from Star Garages.
+                            We respect your privacy and will never share your information.
+                        </p>
                     </div>
 
                     {/* Contact Information */}
@@ -409,12 +182,15 @@ export function ContactSection() {
                                 </a>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                {/* Service Areas Map */}
-                <div className="mt-16 max-w-6xl mx-auto">
-                    <ServiceAreasMap />
+                        {/* Service Areas Map */}
+                        <div className="mt-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8">
+                            <h3 className="text-2xl font-bold text-white mb-6">
+                                Service Areas
+                            </h3>
+                            <ServiceAreasMap />
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

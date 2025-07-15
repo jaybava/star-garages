@@ -1,4 +1,4 @@
-import { Award, Shield, CreditCard, FileText } from "lucide-react";
+import {Award, Shield, FileText, Star} from "lucide-react";
 
 const stats = [
     {
@@ -15,9 +15,9 @@ const stats = [
     },
     {
         icon: Award,
-        number: "5.0 ★",
+        number: "4.5 ★",
         label: "Google Reviews",
-        description: "127+ verified customer reviews"
+        description: "Verified customer reviews"
     },
     {
         icon: FileText,
@@ -80,18 +80,21 @@ export function WhyStarGarages() {
                             <span className="text-sm font-medium">Licensed & Insured</span>
                         </div>
                         <div className="flex items-center space-x-2">
-                            <Award className="h-5 w-5" />
-                            <span className="text-sm font-medium">BBB Accredited</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
                             <div className="flex text-star-gold">
-                                {[1,2,3,4,5].map(i => (
-                                    <svg key={i} className="h-4 w-4 fill-current" viewBox="0 0 20 20">
-                                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
-                                    </svg>
+                                {[1, 2, 3, 4].map((star) => (
+                                    <Star key={star} className="h-5 w-5 fill-current" />
                                 ))}
+                                <Star key="half" className="h-5 w-5" fill="url(#halfStarGradient)" />
+                                <svg width="0" height="0">
+                                    <defs>
+                                        <linearGradient id="halfStarGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                            <stop offset="50%" style={{ stopColor: "currentColor" }} stopOpacity="1"/>
+                                            <stop offset="50%" style={{ stopColor: "currentColor" }} stopOpacity="0"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
                             </div>
-                            <span className="text-sm font-medium">5.0 Google Reviews</span>
+                            <span className="text-sm font-medium">4.5 Google Reviews</span>
                         </div>
                     </div>
                 </div>

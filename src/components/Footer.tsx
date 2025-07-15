@@ -2,6 +2,7 @@
 
 import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin, Star } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export function Footer() {
     const currentYear = new Date().getFullYear();
@@ -13,11 +14,13 @@ export function Footer() {
                     {/* Company Info */}
                     <div className="space-y-6">
                         <div className="flex items-center space-x-3">
-                            <div className="w-12 h-12 bg-gradient-to-br from-star-gold to-star-gold-light rounded-lg flex items-center justify-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-premium-gray">
-                                    <path d="M12 2L15.09 8.26L22 9L17 14L18.18 21L12 17.77L5.82 21L7 14L2 9L8.91 8.26L12 2Z"
-                                          fill="currentColor"/>
-                                </svg>
+                            <div className="w-16 h-16 flex items-center justify-center">
+                                <Image
+                                    src="/images/android-chrome-192x192.png"
+                                    alt="Star Garages Logo"
+                                    width={40}
+                                    height={40}
+                                />
                             </div>
                             <div>
                                 <div className="font-bold text-xl">STAR GARAGES</div>
@@ -168,14 +171,23 @@ export function Footer() {
                             <div className="mt-6 p-4 bg-white/5 rounded-xl border border-white/10">
                                 <div className="flex items-center space-x-2 mb-2">
                                     <div className="flex text-star-gold">
-                                        {[1,2,3,4,5].map(i => (
-                                            <Star key={i} className="h-4 w-4 fill-current" />
+                                        {[1, 2, 3, 4].map((star) => (
+                                            <Star key={star} className="h-5 w-5 fill-current" />
                                         ))}
+                                        <Star key="half" className="h-5 w-5" fill="url(#halfStarGradient)" />
+                                        <svg width="0" height="0">
+                                            <defs>
+                                                <linearGradient id="halfStarGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                                    <stop offset="50%" style={{ stopColor: "currentColor" }} stopOpacity="1"/>
+                                                    <stop offset="50%" style={{ stopColor: "currentColor" }} stopOpacity="0"/>
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
                                     </div>
-                                    <span className="text-white font-semibold">5.0</span>
+                                    <span className="text-white font-semibold">4.5</span>
                                 </div>
                                 <div className="text-white/70 text-sm">
-                                    127+ Google Reviews
+                                    Google Reviews
                                 </div>
                             </div>
                         </div>
@@ -188,23 +200,8 @@ export function Footer() {
                         <div className="text-white/60 text-sm">
                             © {currentYear} Star Construction & Garage Door Ltd. All Rights Reserved.
                         </div>
-
-                        <div className="flex flex-wrap gap-6 text-sm">
-                            <a href="#" className="text-white/60 hover:text-star-gold transition-colors">
-                                Privacy Policy
-                            </a>
-                            <a href="#" className="text-white/60 hover:text-star-gold transition-colors">
-                                Terms of Service
-                            </a>
-                            <a href="#" className="text-white/60 hover:text-star-gold transition-colors">
-                                Cookie Policy
-                            </a>
-                        </div>
-
                         <div className="flex items-center space-x-4 text-sm text-white/60">
                             <span>Licensed & Insured</span>
-                            <span>•</span>
-                            <span>BBB Accredited</span>
                             <span>•</span>
                             <span>WCB Coverage</span>
                         </div>

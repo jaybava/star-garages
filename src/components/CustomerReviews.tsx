@@ -203,15 +203,21 @@ export function CustomerReviews() {
                             <span className="font-semibold text-foreground">Google Reviews</span>
                         </div>
                         <div className="flex items-center space-x-1">
-                            <span className="text-2xl font-bold text-foreground">5.0</span>
+                            <span className="text-2xl font-bold text-foreground">4.5</span>
                             <div className="flex text-star-gold">
-                                {[1, 2, 3, 4, 5].map((star) => (
+                                {[1, 2, 3, 4].map((star) => (
                                     <Star key={star} className="h-5 w-5 fill-current" />
                                 ))}
+                                <Star key="half" className="h-5 w-5" fill="url(#halfStarGradient)" />
+                                <svg width="0" height="0">
+                                    <defs>
+                                        <linearGradient id="halfStarGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                            <stop offset="50%" style={{ stopColor: "currentColor" }} stopOpacity="1"/>
+                                            <stop offset="50%" style={{ stopColor: "currentColor" }} stopOpacity="0"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
                             </div>
-                        </div>
-                        <div className="text-muted-foreground">
-                            (127 reviews)
                         </div>
                     </div>
                 </div>

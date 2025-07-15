@@ -47,7 +47,7 @@ export function HeroSection() {
 
                 <div className="reveal-up mb-12" style={{ animationDelay: '0.2s' }}>
                     <p className="hero-subtitle">
-                        Edmonton's Trusted Garage Builders for Over 10 Years.<br />
+                        Edmonton's Trusted Garage Builders for Over 5 Years.<br />
                         Quality Builds at Fair Price.
                     </p>
                 </div>
