@@ -10,11 +10,11 @@ const faqs = [
     questions: [
       {
         question: "How long does a garage take to build?",
-        answer: "4–5 days from planning to final stage."
+        answer: "2-3 weeks from planning to final stage."
       },
       {
         question: "How long do the permits take?",
-        answer: "Varies by city and season."
+        answer: "3-4 days."
       },
       {
         question: "Do you build in winter?",

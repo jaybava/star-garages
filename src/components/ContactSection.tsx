@@ -38,7 +38,7 @@ export function ContactSection() {
                             </p>
                         </div>
 
-                        <div style={{ height: '1500px' }}>
+                        <div style={{ height: '1800px' }} className="md:!h-[1500px]">
                             <iframe
                                 src="https://link.leadxpert.io/widget/form/vgReTHxGtlPi2jGRnwVG"
                                 style={{ width: '100%', height: '100%', border: 'none', borderRadius: '3px' }}
@@ -75,35 +75,37 @@ export function ContactSection() {
                             <div className="space-y-6">
                                 <div className="flex items-center space-x-4">
                                     <div className="w-12 h-12 bg-star-gold rounded-xl flex items-center justify-center">
-                                        <Phone className="h-6 w-6 text-premium-gray" />
+                                        <Phone className="h-6 w-6 text-premium-gray"/>
                                     </div>
                                     <div>
-                                        <div className="text-white font-semibold">Paul Braich</div>
-                                        <a href="tel:(780)667-7827" className="text-star-gold hover:text-star-gold-light">
+                                        <div className="text-white font-semibold">Main Line - For quotes only</div>
+                                        <a href="tel:(587)404-4749" className="text-star-gold hover:text-star-gold-light">
+                                            (587) 404-4749
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className="flex items-center space-x-4">
+                                    <div className="w-12 h-12 bg-star-gold rounded-xl flex items-center justify-center">
+                                        <Phone className="h-6 w-6 text-premium-gray"/>
+                                    </div>
+                                    <div>
+                                        <div className="text-white font-semibold">Paul Braich - For other inquires</div>
+                                        <a href="tel:(780)667-7827"
+                                           className="text-star-gold hover:text-star-gold-light">
                                             (780) 667-7827
                                         </a>
                                     </div>
                                 </div>
 
-                                <div className="flex items-center space-x-4">
-                                    <div className="w-12 h-12 bg-star-gold rounded-xl flex items-center justify-center">
-                                        <Phone className="h-6 w-6 text-premium-gray" />
-                                    </div>
-                                    <div>
-                                        <div className="text-white font-semibold">Harry Singh</div>
-                                        <a href="tel:(403)629-2975" className="text-star-gold hover:text-star-gold-light">
-                                            (403) 629-2975
-                                        </a>
-                                    </div>
-                                </div>
 
                                 <div className="flex items-center space-x-4">
                                     <div className="w-12 h-12 bg-star-gold rounded-xl flex items-center justify-center">
-                                        <Mail className="h-6 w-6 text-premium-gray" />
+                                        <Mail className="h-6 w-6 text-premium-gray"/>
                                     </div>
                                     <div>
                                         <div className="text-white font-semibold">Email Us</div>
-                                        <a href="mailto:info.stargarages@gmail.com" className="text-star-gold hover:text-star-gold-light">
+                                        <a href="mailto:info.stargarages@gmail.com"
+                                           className="text-star-gold hover:text-star-gold-light">
                                             info.stargarages@gmail.com
                                         </a>
                                     </div>
@@ -111,7 +113,7 @@ export function ContactSection() {
 
                                 <div className="flex items-center space-x-4">
                                     <div className="w-12 h-12 bg-star-gold rounded-xl flex items-center justify-center">
-                                        <MapPin className="h-6 w-6 text-premium-gray" />
+                                        <MapPin className="h-6 w-6 text-premium-gray"/>
                                     </div>
                                     <div>
                                         <div className="text-white font-semibold">Service Area</div>
@@ -124,7 +126,7 @@ export function ContactSection() {
 
                                 <div className="flex items-center space-x-4">
                                     <div className="w-12 h-12 bg-star-gold rounded-xl flex items-center justify-center">
-                                        <Clock className="h-6 w-6 text-premium-gray" />
+                                        <Clock className="h-6 w-6 text-premium-gray"/>
                                     </div>
                                     <div>
                                         <div className="text-white font-semibold">Business Hours</div>
@@ -136,12 +138,12 @@ export function ContactSection() {
                         </div>
 
                         {/* Why Choose Us - Quick Points */}
-                        <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8">
-                            <h3 className="text-2xl font-bold text-white mb-6">
+                        <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-12 mt-24">
+                            <h3 className="text-2xl font-bold text-white mb-12">
                                 Why Choose Star Garages?
                             </h3>
 
-                            <div className="space-y-4">
+                            <div className="space-y-8">
                                 {[
                                     "Free consultations & quotes",
                                     "All permits & approvals handled",
@@ -156,40 +158,16 @@ export function ContactSection() {
                                 ))}
                             </div>
                         </div>
+                    </div>
+                </div>
 
-                        {/* Emergency Contact */}
-                        <div className="bg-gradient-to-r from-star-gold/20 to-star-gold-light/20 border border-star-gold/30 rounded-2xl p-6">
-                            <h4 className="text-lg font-bold text-white mb-2">
-                                Need Emergency Service?
-                            </h4>
-                            <p className="text-white/80 text-sm mb-4">
-                                We offer emergency garage door repairs and structural assessments.
-                            </p>
-                            <div className="flex flex-col space-y-2">
-                                <a
-                                    href="tel:(780)667-7827"
-                                    className="inline-flex items-center text-star-gold hover:text-star-gold-light font-semibold"
-                                >
-                                    Paul: (780) 667-7827
-                                    <Phone className="ml-2 h-4 w-4" />
-                                </a>
-                                <a
-                                    href="tel:(403)629-2975"
-                                    className="inline-flex items-center text-star-gold hover:text-star-gold-light font-semibold"
-                                >
-                                    Harry: (403) 629-2975
-                                    <Phone className="ml-2 h-4 w-4" />
-                                </a>
-                            </div>
-                        </div>
-
-                        {/* Service Areas Map */}
-                        <div className="mt-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8">
-                            <h3 className="text-2xl font-bold text-white mb-6">
-                                Service Areas
-                            </h3>
-                            <ServiceAreasMap />
-                        </div>
+                {/* Service Areas Map - Moved below the grid */}
+                <div className="mt-16 max-w-6xl mx-auto">
+                    <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8">
+                        <h3 className="text-2xl font-bold text-white mb-6">
+                            Service Areas
+                        </h3>
+                        <ServiceAreasMap />
                     </div>
                 </div>
             </div>

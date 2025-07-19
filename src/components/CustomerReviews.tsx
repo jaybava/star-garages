@@ -63,6 +63,18 @@ const reviews = [
         rating: 5,
         review: "Paul was super friendly and thorough. We were really happy with the outcome and would absolutely recommend!",
         avatar: "AP"
+    },
+    {
+        name: "Abhi Tiwari",
+        rating: 5,
+        review: "Paul and his team did an amazing job. They also built out fence and deck on our sepcial request. Paul understood what we wanted and built a beautiful garage. Thank you so much and god bless!",
+        avatar: "AT"
+    },
+    {
+        name: "Karan Natt",
+        rating: 5,
+        review: "Happy to build with star. They built our garage from scratch. Planned with paul and turned out exactly how I wanted. Definitely recommend their services.",
+        avatar: "KN"
     }
 ];
 
@@ -88,7 +100,7 @@ export function CustomerReviews() {
                         What Our <span className="text-gradient">Customers</span> Say
                     </h2>
                     <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                        Don't just take our word for it. Here's what Calgary homeowners say about their Star Garages experience.
+                        Don't just take our word for it. Here's what Edmonton homeowners say about their Star Garages experience.
                     </p>
                 </div>
 
@@ -201,23 +213,6 @@ export function CustomerReviews() {
                                 <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
                             </svg>
                             <span className="font-semibold text-foreground">Google Reviews</span>
-                        </div>
-                        <div className="flex items-center space-x-1">
-                            <span className="text-2xl font-bold text-foreground">4.5</span>
-                            <div className="flex text-star-gold">
-                                {[1, 2, 3, 4].map((star) => (
-                                    <Star key={star} className="h-5 w-5 fill-current" />
-                                ))}
-                                <Star key="half" className="h-5 w-5" fill="url(#halfStarGradient)" />
-                                <svg width="0" height="0">
-                                    <defs>
-                                        <linearGradient id="halfStarGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                            <stop offset="50%" style={{ stopColor: "currentColor" }} stopOpacity="1"/>
-                                            <stop offset="50%" style={{ stopColor: "currentColor" }} stopOpacity="0"/>
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
-                            </div>
                         </div>
                     </div>
                 </div>

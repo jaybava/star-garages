@@ -5,19 +5,13 @@ const stats = [
         icon: Award,
         number: "10+",
         label: "Years Experience",
-        description: "Trusted Calgary garage builders since 2014"
+        description: "Trusted Edmonton garage builders since 2014"
     },
     {
         icon: Shield,
-        number: "10-Year",
+        number: "10/3/1",
         label: "Structural Warranty",
         description: "Comprehensive coverage & peace of mind"
-    },
-    {
-        icon: Award,
-        number: "4.5 ★",
-        label: "Google Reviews",
-        description: "Verified customer reviews"
     },
     {
         icon: FileText,
@@ -36,40 +30,42 @@ export function WhyStarGarages() {
                         Why Choose Star Garages?
                     </h2>
                     <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                        Experience the difference of working with Calgary's most trusted garage builders.
+                        Experience the difference of working with Edmonton's most trusted garage builders.
                         We handle everything so you don't have to.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {stats.map((stat, index) => {
-                        const Icon = stat.icon;
-                        return (
-                            <div
-                                key={index}
-                                className="text-center group hover:scale-105 transition-all duration-500"
-                                style={{ animationDelay: `${index * 0.1}s` }}
-                            >
-                                <div className="feature-card">
-                                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-star-gold to-star-gold-light rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                                        <Icon className="h-8 w-8 text-premium-gray" />
-                                    </div>
+                <div className="max-w-5xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {stats.map((stat, index) => {
+                            const Icon = stat.icon;
+                            return (
+                                <div
+                                    key={index}
+                                    className="text-center group hover:scale-105 transition-all duration-500"
+                                    style={{ animationDelay: `${index * 0.1}s` }}
+                                >
+                                    <div className="feature-card bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8">
+                                        <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-star-gold to-star-gold-light rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                                            <Icon className="h-8 w-8 text-premium-gray" />
+                                        </div>
 
-                                    <div className="text-3xl lg:text-4xl font-bold text-gradient mb-2">
-                                        {stat.number}
-                                    </div>
+                                        <div className="text-4xl font-bold text-gradient mb-3">
+                                            {stat.number}
+                                        </div>
 
-                                    <div className="text-xl font-semibold text-foreground mb-2">
-                                        {stat.label}
-                                    </div>
+                                        <div className="text-xl font-semibold text-foreground mb-3">
+                                            {stat.label}
+                                        </div>
 
-                                    <p className="text-muted-foreground">
-                                        {stat.description}
-                                    </p>
+                                        <p className="text-muted-foreground">
+                                            {stat.description}
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                        );
-                    })}
+                            );
+                        })}
+                    </div>
                 </div>
 
                 {/* Trust Indicators */}
@@ -78,23 +74,6 @@ export function WhyStarGarages() {
                         <div className="flex items-center space-x-2">
                             <Shield className="h-5 w-5" />
                             <span className="text-sm font-medium">Licensed & Insured</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                            <div className="flex text-star-gold">
-                                {[1, 2, 3, 4].map((star) => (
-                                    <Star key={star} className="h-5 w-5 fill-current" />
-                                ))}
-                                <Star key="half" className="h-5 w-5" fill="url(#halfStarGradient)" />
-                                <svg width="0" height="0">
-                                    <defs>
-                                        <linearGradient id="halfStarGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                            <stop offset="50%" style={{ stopColor: "currentColor" }} stopOpacity="1"/>
-                                            <stop offset="50%" style={{ stopColor: "currentColor" }} stopOpacity="0"/>
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
-                            </div>
-                            <span className="text-sm font-medium">4.5 Google Reviews</span>
                         </div>
                     </div>
                 </div>

@@ -47,7 +47,7 @@ export function FloatingCTA() {
                 className="bg-green-600 hover:bg-green-700 text-white shadow-2xl hover:scale-110 transition-all duration-300 px-6 py-3"
                 size="lg"
             >
-                <a href="tel:(780)667-7827">
+                <a href="tel:(587)404-4749">
                     <Phone className="mr-2 h-5 w-5" />
                     Call Now
                 </a>

@@ -1,5 +1,6 @@
 'use client';
 
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Calculator, Clock, Shield } from "lucide-react";
 
@@ -44,12 +45,18 @@ export function FinancingSection() {
                     {/* Header */}
                     <div className="text-center mb-16">
                         <div className="flex items-center justify-center mb-6">
-                            <Button
-                                className="bg-emerald-500 text-white px-4 py-2 rounded-lg font-bold text-lg hover:bg-emerald-600 transition-colors"
+                            <button
                                 onClick={() => handleExternalLink('https://www.financeit.io/')}
+                                className="p-4 rounded-3xl hover:bg-white transition-all duration-300"
                             >
-                                Financeit
-                            </Button>
+                                <Image
+                                    src="/images/financeit.png"
+                                    alt="Financeit Logo"
+                                    width={300}
+                                    height={75}
+                                    className="h-20 w-auto"
+                                />
+                            </button>
                         </div>
                         <h2 className="text-display font-bold mb-6 text-premium-gray">
                             Finance Your <span className="text-gradient">Garage Today!</span>

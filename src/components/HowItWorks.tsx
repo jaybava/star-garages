@@ -1,35 +1,49 @@
 'use client';
 
-import { Calendar, PenTool, FileCheck, HandHeart } from "lucide-react";
+import { Calendar, PenTool, FileCheck, Check, Hammer } from "lucide-react";
 
 const steps = [
     {
         icon: Calendar,
         number: "01",
-        title: "Book Estimate",
-        description: "Schedule your free consultation. We'll visit your property, understand your vision, and provide a detailed quote.",
-        details: ["Free on-site consultation", "3D design preview", "Transparent pricing", "No hidden fees"]
+        title: "Request Your Free Estimate",
+        description: "Share your project details and receive a clear, upfront estimate.",
+        details: ["Transparent pricing", "No hidden fees"]
     },
     {
         icon: PenTool,
         number: "02",
-        title: "Approve Design",
-        description: "Review your custom design with detailed 3D renderings. Make adjustments until it's perfect for your needs.",
-        details: ["Custom 3D renderings", "Material selections", "Timeline confirmation", "Contract signing"]
+        title: "On‑Site Consultation & Planning",
+        description: "We visit your site, review your needs, and finalize the project plan.",
+        details: ["Material selections", "Timeline confirmation", "Contract signing"]
     },
     {
         icon: FileCheck,
         number: "03",
-        title: "We Handle Permits",
-        description: "Sit back and relax. We take care of all permits, city approvals, and engineering requirements.",
+        title: "Permits & Approvals",
+        description: "Our team handles the required permits and paperwork for you.",
         details: ["Permit applications", "City approvals", "Engineering stamps", "Code compliance"]
     },
     {
-        icon: HandHeart,
+        icon: Hammer,
         number: "04",
-        title: "Build & Final Walkthrough",
-        description: "Watch your dream garage come to life. We'll keep you updated throughout and do a final walkthrough together.",
-        details: ["Quality construction", "Regular updates", "Clean worksite", "Final inspection"]
+        title: "Construction Begins",
+        description: "We complete the build with quality craftsmanship and attention to detail.",
+        details: ["Quality construction", "Regular updates"]
+    },
+    {
+        icon: Check,
+        number: "05",
+        title: "City Inspections",
+        description: "All required inspections are scheduled and passed before moving forward.",
+        details: [ "Clean worksite", "Final inspection"]
+    },
+    {
+        icon: Check,
+        number: "06",
+        title: "Final Walkthrough & Key Handover",
+        description: "Together we review the finished project, then hand over your keys.",
+        details: [ "Clean worksite", "Final inspection"]
     }
 ];
 
@@ -50,10 +64,7 @@ export function HowItWorks() {
                     {/* Desktop Timeline */}
                     <div className="hidden lg:block">
                         <div className="relative">
-                            {/* Timeline Line */}
-                            <div className="absolute top-24 left-0 right-0 h-0.5 bg-gradient-to-r from-star-gold via-star-gold-light to-star-gold"></div>
-
-                            <div className="grid grid-cols-4 gap-8">
+                            <div className="grid grid-cols-3 gap-8 gap-y-16">
                                 {steps.map((step, index) => {
                                     const Icon = step.icon;
                                     return (
@@ -138,21 +149,23 @@ export function HowItWorks() {
                 </div>
 
                 {/* Timeline Stats */}
-                <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                    <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-                        <div className="text-3xl font-bold text-star-gold mb-2">6-12</div>
-                        <div className="text-white font-medium">Week Timeline</div>
-                        <div className="text-white/60 text-sm">Typical project completion</div>
-                    </div>
-                    <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-                        <div className="text-3xl font-bold text-star-gold mb-2">100%</div>
-                        <div className="text-white font-medium">Permit Success</div>
-                        <div className="text-white/60 text-sm">We handle all approvals</div>
-                    </div>
-                    <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-                        <div className="text-3xl font-bold text-star-gold mb-2">10-Year</div>
-                        <div className="text-white font-medium">Warranty</div>
-                        <div className="text-white/60 text-sm">Structural guarantee</div>
+                <div className="mt-20 max-w-5xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center">
+                            <div className="text-4xl font-bold text-star-gold mb-3">2-3</div>
+                            <div className="text-white font-medium mb-1">Week Timeline</div>
+                            <div className="text-white/60 text-sm">Typical project completion</div>
+                        </div>
+                        <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center">
+                            <div className="text-4xl font-bold text-star-gold mb-3">100%</div>
+                            <div className="text-white font-medium mb-1">Inspection guarantee</div>
+                            <div className="text-white/60 text-sm">We handle all approvals</div>
+                        </div>
+                        <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center">
+                            <div className="text-4xl font-bold text-star-gold mb-3">10/3/1</div>
+                            <div className="text-white font-medium mb-1">Warranty</div>
+                            <div className="text-white/60 text-sm">Structural guarantee</div>
+                        </div>
                     </div>
                 </div>
             </div>

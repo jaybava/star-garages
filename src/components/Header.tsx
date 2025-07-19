@@ -84,11 +84,11 @@ export function Header() {
                     {/* Contact */}
                     <div className="hidden lg:flex items-center">
                         <a
-                            href="tel:(780)667-7827"
+                            href="tel:(587)404-4749"
                             className="text-premium-gray hover:text-star-gold transition-colors font-medium flex items-center gap-2"
                         >
                             <Phone className="h-4 w-4" />
-                            (780) 667-7827
+                            (587) 404-4749
                         </a>
                     </div>
 
@@ -129,11 +129,11 @@ export function Header() {
                             ))}
                             <div className="px-6 py-3 border-t border-gray-200 mt-4">
                                 <a
-                                    href="tel:(780)667-7827"
+                                    href="tel:(587)404-4749"
                                     className="block text-premium-gray hover:text-star-gold transition-colors font-medium flex items-center gap-2"
                                 >
                                     <Phone className="h-4 w-4" />
-                                    (780) 667-7827
+                                    (587) 404-4749
                                 </a>
                             </div>
                         </nav>

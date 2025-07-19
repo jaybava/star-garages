@@ -8,29 +8,29 @@ const upgrades = [
         image: "/images/2x6.png"
     },
     {
-        title: "9' Wall Height",
+        title: "9' Wall Height and 8' Garage door",
         description: "The 9' wall provides a more spacious garage and provides you the option of installing an 8' overhead garage door",
-        image: "/images/9-wall.png"
+        image: "/images/9-wall.jpg"
     },
     {
-        title: "8' Garage door",
-        description: "Have a pick-up truck with an extension? We recommend you get the 8' overhead door to make parking your truck easier. NOTE: this requires a 9' wall height",
-        image: "/images/8-garage.png"
+        title: "Party Door",
+        description: "Add a party door for easy access without lifting the main garage door. It’s perfect for backyard gatherings, grabbing tools, or stepping in and out without hassle—making your garage more functional and convenient every day.",
+        image: "/images/party-door.jpg"
     },
     {
-        title: "6/12 Gable Pitch",
-        description: "Adding attic storage to your garage? We recommend the 6/12 gable pitch. This provides you with a more spacious attic. Additionally, this allows easy runoff of snow and rain, as it provides a sloped structure to the roof.",
-        image: "/images/6-gable-pitch.png"
+        title: "8/12 Gable Pitch",
+        description: "Adding attic storage to your garage? We recommend the 8/12 gable pitch. This provides you with a more spacious attic. Additionally, this allows easy runoff of snow and rain, as it provides a sloped structure to the roof.",
+        image: "/images/6-gable-pitch.jpg"
     },
     {
         title: "Attic Storage",
         description: "Is your yard too small? Looking for additional storage? You can loft your garage for extra space. This provides you with a space to store all your vehicular accessories and any other objects that may need storing. NOTE: This additional feature can only be added to your garage before the garage has been built.",
-        image: "/images/attic-storage.png"
+        image: "/images/attic-storage.jpg"
     },
     {
         title: "Insulation and Drywall",
         description: "Insulation moderates the temperature in your garage. It keeps your garage warm in the winters and cool in the summers ensuring optimal storage conditions for your cars and other belongings. Drywall provides fire resistance, noise reduction and good lighting which optimizes visibility.",
-        image: "/images/insulation-drywall.png"
+        image: "/images/insulation-drywall.jpg"
     }
 ];
 

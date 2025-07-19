@@ -32,14 +32,11 @@ export function Footer() {
                             garage suites, and laneway homes. Over 10 years of trusted service.
                         </p>
                         <div className="flex space-x-4">
-                            <a href="#" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-star-gold hover:text-premium-gray transition-colors">
+                            <a href="https://www.facebook.com/stargarages" target="_blank" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-star-gold hover:text-premium-gray transition-colors">
                                 <Facebook className="h-5 w-5" />
                             </a>
-                            <a href="#" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-star-gold hover:text-premium-gray transition-colors">
+                            <a href="https://www.instagram.com/stargarages/" target="_blank" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-star-gold hover:text-premium-gray transition-colors">
                                 <Instagram className="h-5 w-5" />
-                            </a>
-                            <a href="#" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-star-gold hover:text-premium-gray transition-colors">
-                                <Linkedin className="h-5 w-5" />
                             </a>
                         </div>
 
@@ -78,9 +75,6 @@ export function Footer() {
                         <div className="space-y-3">
                             {[
                                 "Detached Garages",
-                                "Garage Suites",
-                                "Laneway Homes",
-                                "Custom Design & Drafting",
                                 "Permits & Approvals",
                                 "Garage Door Installation"
                             ].map((service, index) => (
@@ -96,15 +90,12 @@ export function Footer() {
                         <h3 className="font-bold text-lg mb-6 text-white">Quick Links</h3>
                         <div className="space-y-3">
                             {[
-                                { label: "About Us", href: "#about" },
+                                { label: "About Us", href: "/#why-us" },
                                 { label: "Our Projects", href: "/projects" },
-                                { label: "Upgrades", href: "/upgrades" },
+                                { label: "Upgrades", href: "/#upgrades" },
                                 { label: "FAQ", href: "/faq" },
-                                { label: "Videos", href: "/videos" },
-                                { label: "How It Works", href: "#process" },
                                 { label: "Contact", href: "#contact" },
-                                { label: "Free Quote", href: "#contact" },
-                                { label: "Financing Options", href: "#financing" }
+                                { label: "Financing Options", href: "/financing" }
                             ].map((link, index) => (
                                 link.href.startsWith('/') ? (
                                     <Link
@@ -139,11 +130,13 @@ export function Footer() {
                                 <Phone className="h-5 w-5 text-star-gold mt-0.5" />
                                 <div>
                                     <div className="space-y-1">
-                                        <a href="tel:(780)667-7827" className="text-white/90 hover:text-star-gold transition-colors block">
-                                            Paul: (780) 667-7827
+                                        <a href="tel:(587)404-4749" className="text-white/90 hover:text-star-gold transition-colors block">
+                                            <div>Main Line - For quotes only:</div>
+                                            <div>(587) 404-4749</div>
                                         </a>
-                                        <a href="tel:(403)629-2975" className="text-white/90 hover:text-star-gold transition-colors block">
-                                            Harry: (403) 629-2975
+                                        <a href="tel:(780)667-7827" className="text-white/90 hover:text-star-gold transition-colors block">
+                                            <div>Paul - For other inquires:</div>
+                                            <div>(780) 667-7827</div>
                                         </a>
                                     </div>
                                     <div className="text-white/60 text-sm">Call for immediate assistance</div>
@@ -165,29 +158,6 @@ export function Footer() {
                                 <div>
                                     <div className="text-white/90">Edmonton, AB & Surrounding Areas</div>
                                     <div className="text-white/60 text-sm">Fort Saskatchewan • Sherwood • Beaumont • Leduc • Spruce Grove • St. Albert</div>
-                                </div>
-                            </div>
-
-                            <div className="mt-6 p-4 bg-white/5 rounded-xl border border-white/10">
-                                <div className="flex items-center space-x-2 mb-2">
-                                    <div className="flex text-star-gold">
-                                        {[1, 2, 3, 4].map((star) => (
-                                            <Star key={star} className="h-5 w-5 fill-current" />
-                                        ))}
-                                        <Star key="half" className="h-5 w-5" fill="url(#halfStarGradient)" />
-                                        <svg width="0" height="0">
-                                            <defs>
-                                                <linearGradient id="halfStarGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                                    <stop offset="50%" style={{ stopColor: "currentColor" }} stopOpacity="1"/>
-                                                    <stop offset="50%" style={{ stopColor: "currentColor" }} stopOpacity="0"/>
-                                                </linearGradient>
-                                            </defs>
-                                        </svg>
-                                    </div>
-                                    <span className="text-white font-semibold">4.5</span>
-                                </div>
-                                <div className="text-white/70 text-sm">
-                                    Google Reviews
                                 </div>
                             </div>
                         </div>

@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowRight, Play, ChevronDown } from "lucide-react";
+import {ArrowRight, Play, ChevronDown, Phone} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 
@@ -13,6 +13,10 @@ export function HeroSection() {
 
     const goToProjects = () => {
         router.push('/projects');
+    };
+
+    const openBooking = () => {
+        window.open('https://link.leadxpert.io/widget/booking/0ahMvDOfXWh0dRLW2YZ4', '_blank', 'noopener,noreferrer');
     };
 
     return (
@@ -41,14 +45,14 @@ export function HeroSection() {
                 <div className="reveal-up mb-6">
                     <h1 className="hero-title mb-6">
                         Build Smarter.<br />
-                        Build Beautiful.
+                        Build Star.
                     </h1>
                 </div>
 
                 <div className="reveal-up mb-12" style={{ animationDelay: '0.2s' }}>
                     <p className="hero-subtitle">
-                        Edmonton's Trusted Garage Builders for Over 5 Years.<br />
-                        Quality Builds at Fair Price.
+                        Edmonton's Trusted Garage Builders for Over a Decade.<br />
+                        Quality Builds at a Fair Price.
                     </p>
                 </div>
 
@@ -58,8 +62,17 @@ export function HeroSection() {
                         className="btn-hero text-lg text-premium-gray hover:text-white"
                         onClick={scrollToContact}
                     >
-                        Book a Free Estimate
+                        Get a Free Estimate
                         <ArrowRight className="ml-2 h-5 w-5" />
+                    </Button>
+
+                    <Button
+                        size="lg"
+                        className="btn-hero text-lg text-premium-gray hover:text-white"
+                        onClick={openBooking}
+                    >
+                        <Phone className="mr-2 h-5 w-5" />
+                        Schedule a Call
                     </Button>
 
                     <Button
